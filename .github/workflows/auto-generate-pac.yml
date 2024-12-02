@@ -24,7 +24,7 @@ jobs:
         run: curl -L https://raw.githubusercontent.com/Loyalsoldier/geoip/release/text/cn.txt -o cidrs-cn.txt
 
       - name: Run gfw-pac.py script
-        run: ./gfw-pac.py -f gfw.pac -p "PROXY 127.0.0.1:3128" --proxy-domains=proxy-domains.txt --direct-domains=direct-domains.txt --localtld-domains=local-tlds.txt --ip-file=cidrs-cn.txt
+        run: ./gfw-pac.py -f gfw.pac -p "PROXY 127.0.0.1:7897" --proxy-domains=proxy-domains.txt --direct-domains=direct-domains.txt --localtld-domains=local-tlds.txt --ip-file=cidrs-cn.txt
 
       - name: Commit and push changes
         run: |
